@@ -18,32 +18,23 @@
 
 /**
  * @author ChalkPE <amato0617@gmail.com>
- * @since 2015-04-29 16:01
+ * @since 2015-05-02 20:38
  * @copyright Apache-v2.0
  */
 
 namespace chalk\utils;
 
-class Language {
-	/** @var string */
-	private $name;
 
-	/** @var string[] */
-	private $messages = [];
+interface Arrayable {
+    /**
+     * @param $index
+     * @param array $array
+     * @return mixed
+     */
+    public static function createFromArray($index, $array);
 
-	/**
-	 * @param string $name
-	 * @param string[] $messages
-	 */
-	public function __construct($name, array $messages){
-		$this->name = $name;
-		$this->messages = $messages;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getName(){
-		return $this->name;
-	}
+    /**
+     * @return array
+     */
+    public function toArray();
 }
