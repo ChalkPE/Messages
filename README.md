@@ -1,2 +1,2 @@
 # Messages
-The simple string resource manager for PocketMine-MP
+The simple utilities for PocketMine-MP
